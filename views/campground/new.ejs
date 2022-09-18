@@ -1,0 +1,58 @@
+<%- layout('./layout/boilerplate') %>
+
+  <div class="container my-auto">
+    <h1 class="display-1 text-center mb-5">New Campground</h1>
+    <div class="row">
+      <form class="col-lg-6 offset-lg-3 validated-form" action="/campgrounds" method="POST" novalidate
+        enctype="multipart/form-data">
+        <div class="form-floating mb-3">
+          <input name="campground[title]" type="text" class="form-control" id="title" placeholder="Enter Title"
+            required>
+          <label class="col-form-label" for="title">Title</label>
+          <div class="valid-feedback">
+            Looks Good!
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="campground[price]" type="text" class="form-control" id="price" placeholder="Enter Price"
+            required>
+          <label class="col-form-label" for="price">Price</label>
+          <div class="valid-feedback">
+            Looks Good!
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="campground[description]" type="text" class="form-control" id="description"
+            placeholder="Enter Description" required>
+          <label class="col-form-label" for="description">Desctiption</label>
+          <div class="valid-feedback">
+            Looks Good!
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <input name="campground[location]" type="text" class="form-control" id="location" placeholder="Enter Location"
+            required>
+          <label class="col-form-label" for="location">Location</label>
+          <div class="valid-feedback">
+            Looks Good!
+          </div>
+          <div class="form-group my-3">
+            <!-- <input type="file" name="image" id="image" multiple> -->
+            <label for="image" class="col-form-label d-block">Upload images <span class="text-muted">(optional)</span></label>
+            <input class="form-control" name="image" type="file" id="image" multiple>
+            <div id="invalid" class="invalid-feedback">
+              You can't upload more than 2 files
+            </div>
+            <div style="display: none;" class="text-success">
+              Looks Good!
+            </div>
+          </div>
+        </div>
+        <div class="mt-3">
+          <button type="submit" class="btn btn-success">Submit</button>
+          <a class="btn btn-secondary" href="/campgrounds">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="/js/validateForms.js"></script>

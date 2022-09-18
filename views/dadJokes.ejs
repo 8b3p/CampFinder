@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dad jokes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <style>
+    body {
+      height: 100vh;
+    }
+
+    h1 {
+      text-shadow: 5px 5px 6px rgb(170, 170, 170);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="row justify-content-center text-center">
+      <div class="col-sm-8 col-md-6 shadow rounded">
+        <h1 class="display-1">DAD JOKES</h1>
+        <img class="image-fluid w-100 mb-3 rounded"
+          src="https://daily.jstor.org/wp-content/uploads/2019/06/the_dubious_art_of_the_dad_joke_1050x700.jpg"
+          alt="dad laughing">
+        <div class="row mx-1 mb-3 align-items-center">
+          <button class="col-3-sm btn btn-primary">Generate Joke</button>
+          <div class="col-12">
+            <ul class="m-0 text-start fs-5">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/js/dadJokes.js"></script>
+</body>
+
+</html>
